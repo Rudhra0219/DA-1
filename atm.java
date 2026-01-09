@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class ATM {
+public class atm{
 
     static int balance = 10000;
     static ArrayList<String> transactions = new ArrayList<>();
