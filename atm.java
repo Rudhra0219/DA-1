@@ -1,8 +1,9 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class ATM {
 
     static int balance = 10000;
+    static ArrayList<String> transactions = new ArrayList<>();
 
     static void checkBalance() {
         System.out.println("Current Balance: " + balance);
@@ -10,6 +11,7 @@ public class ATM {
 
     static void deposit(int amount) {
         balance += amount;
+         transactions.add("Deposited: " + amount);
         System.out.println("Deposited: " + amount);
     }
 
@@ -22,6 +24,14 @@ public class ATM {
         }
     }
 
+    static void showTransactions() {
+        System.out.println("\nTransaction History:");
+        for (String t : transactions) {
+            System.out.println(t);
+        }
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -31,7 +41,8 @@ public class ATM {
             System.out.println("1. Check Balance");
             System.out.println("2. Deposit");
             System.out.println("3. Withdraw");
-            System.out.println("4. Exit");
+            System.out.println("4. Transaction History");
+            System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
             choice = sc.nextInt();
@@ -48,7 +59,11 @@ public class ATM {
                     System.out.print("Enter amount to withdraw: ");
                     withdraw(sc.nextInt());
                     break;
-                case 4:
+                    case 4:
+                    showTransactions();
+                    break;
+
+                case 5:
                     System.out.println("Thank you for using ATM");
                     sc.close();
                     System.exit(0);
