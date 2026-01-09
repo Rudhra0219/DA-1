@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class atm{
+
+public class atm {
 
     static int balance = 10000;
     static ArrayList<String> transactions = new ArrayList<>();
@@ -11,7 +12,7 @@ public class atm{
 
     static void deposit(int amount) {
         balance += amount;
-         transactions.add("Deposited: " + amount);
+        transactions.add("Deposited: " + amount);
         System.out.println("Deposited: " + amount);
     }
 
@@ -31,7 +32,6 @@ public class atm{
         }
     }
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -48,7 +48,7 @@ public class atm{
             choice = sc.nextInt();
 
             switch (choice) {
-                case 1:
+                case 1: ef
                     checkBalance();
                     break;
                 case 2:
