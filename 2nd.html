@@ -13,6 +13,8 @@
 <br><br>
 <button onclick="add()">Add</button>
 <button onclick="subtraction()">Subtraction</button>
+<button onclick="multiply()">Multiply</button>
+<button onclick="modulus()">Modulus</button>
 <br>
 <p id="result">Result:</p>
 <script>
@@ -26,6 +28,16 @@ let a=Number(document.getElementById("num1").value);
 let b=Number(document.getElementById("num2").value);
 document.getElementById("result").innerText="Result: "+(a-b);
 }
+function multiply(){
+            let a=Number(document.getElementById("num1").value);
+            let b=Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText="Result: "+(a*b);
+        }
+        function modulus(){
+            let a=Number(document.getElementById("num1").value);
+            let b=Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText="Result: "+(a%b);
+        }
 
 </script>
 </body>
