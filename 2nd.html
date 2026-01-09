@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1>Calculator super version</h1>
+<input type="text" id="num1">
+<br><br>
+<input type="text" id="num2">
+<br><br>
+<button onclick="add()">Add</button>
+<button onclick="subtraction()">Subtraction</button>
+<br>
+<p id="result">Result:</p>
+<script>
+function add(){
+let a=Number(document.getElementById("num1").value);
+let b=Number(document.getElementById("num2").value);
+document.getElementById("result").innerText="Result: "+(a+b);
+}
+function subtraction(){
+let a=Number(document.getElementById("num1").value);
+let b=Number(document.getElementById("num2").value);
+document.getElementById("result").innerText="Result: "+(a-b);
+}
